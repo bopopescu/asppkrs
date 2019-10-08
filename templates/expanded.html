@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        TABLE {
+         width: 300px; /* Ширина таблицы */
+         border-collapse: collapse; /* Убираем двойные линии между ячейками */
+        }
+        TD, TH {
+         padding: 3px; /* Поля вокруг содержимого таблицы */
+         border: 1px solid rgb(117, 162, 245); /* Параметры рамки */
+        }
+        TH {
+         background: #b0e0e6; /* Цвет фона */
+        }
+       </style>
+</head>
+<body>
+<h1 align = 'center'>Автоматизированная система подбора пород КРС</h1>
+<span class="border">
+    <div class="container" align='center'>
+        <div class = 'row'>
+            <div class='col-sm-4'>
+                <h4>General data</h4>
+                <table align = 'center' bgcolor = #E0FFFF style ='width:350px'>
+                    <tr>
+                        <td>Breed</td>
+                        <td><INPUT typy = 'TextField' placeholder = 'holstein' required></td>
+                    <tr>
+                        <td>latitude</td>
+                        <td><input type = 'FloatField' placeholder = 12.3 required></td>
+                    </tr>
+                    <tr>
+                        <td>longtitude</td>
+                        <td><input type = 'FloatField' placeholder = 45.6 required></td>
+                    </tr>  
+                    </tr>
+                </table>
+            </div>
+            <div class = 'col-8'>
+                <H1 align ='center'>The First breed</H1>
+            </div>
+        </div>
+
+        <div class = 'row justify-content-start'>
+            <div class = 'col-6'>
+                <h5  align = 'center'>Financial Data</h5>
+                <table align = 'center' bgcolor = #E0FFFF>
+                    <tr>
+                        <td>Self cost per liter</td>
+                        <td><input type = 'FloatField' required name='selfprice1' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='selfprice2' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='selfprice3' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='selfprice4' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='selfprice5' style="width: 100px" placeholder='12.34'></td>
+                    </tr>
+                    <tr>
+                        <td>Subsidies per liter</td>
+                        <td><input type = 'FloatField' required name='subidies1' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='subidies2' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='subidies3' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='subidies4' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='subidies5' style="width: 100px" placeholder='12.34'></td>
+                    </tr>
+                    <tr>
+                        <td>Trade cost per liter</td>
+                        <td><input type = 'FloatField' required name='tradeprice1' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='tradeprice2' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='tradeprice3' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='tradeprice4' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='tradeprice5' style="width: 100px" placeholder='12.34'></td>
+                    </tr>
+                    <tr>
+                        <td>Profitability with subsidies</td>
+                        <td><input type = 'FloatField' required name='rent_with_sub1' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='rent_with_sub2' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='rent_with_sub3' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='rent_with_sub4' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='rent_with_sub5' style="width: 100px" placeholder='12.34'></td>
+                    </tr>
+                    <tr>
+                        <td>Profitability without subsidies</td>
+                        <td><input type = 'FloatField' required name='rent_without_sub1' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='rent_without_sub2' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='rent_without_sub3' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='rent_without_sub4' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='rent_without_sub5' style="width: 100px" placeholder='12.34'></td>
+                    </tr>
+                </table>
+                <h5>Agricultural Data</h5>
+                <table align = 'center' bgcolor = #E0FFFF>                    
+                    <tr>
+                        <td>Lifetime</td>
+                        <td><input type = 'FloatField' required name='lifetime1' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='lifetime2' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='lifetime3' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='lifetime4' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='lifetime5' style="width: 100px" placeholder='12.34'></td>
+                    </tr>
+                    <tr>
+                        <td>Offspring</td>
+                        <td><input type = 'FloatField' required name='offspring1' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='offspring2' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='offspring3' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='offspring4' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='offspring5' style="width: 100px" placeholder='12.34'></td>
+                    </tr>
+                    <tr>
+                        <td>Mortality</td>
+                        <td><input type = 'FloatField' required name='mortality1' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='mortality2' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='mortality3' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='mortality4' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='mortality5' style="width: 100px" placeholder='12.34'></td>
+                    </tr>
+                    <tr>
+                        <td>Yeild</td>
+                        <td><input type = 'FloatField' required name='yeild1' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='yeild2' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='yeild3' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='yeild4' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='yeild5' style="width: 100px" placeholder='12.34'></td>
+                    </tr>
+                </table>
+                <h5>Biological data</h5>
+                <table align = 'center' bgcolor = #E0FFFF>
+                    <tr>
+                        <td>Fat content</td>
+                        <td><input type = 'FloatField' required name='fat_content1' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='fat_content2' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='fat_content3' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='fat_content4' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='fat_content5' style="width: 100px" placeholder='12.34'></td>
+                    <tr>
+                        <td>Protein content</td>
+                        <td><input type = 'FloatField' required name='protein_content1' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='protein_content2' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='protein_content3' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='protein_content3' style="width: 100px" placeholder='12.34'></td>
+                        <td><input type = 'FloatField' required name='protein_content3' style="width: 100px" placeholder='12.34'></td>
+                    </tr> 
+                </table>
+            </div>
+
+
+        </div>
+    </div>
+</span>    
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

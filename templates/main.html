@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+</head>
+
+<title>АСП ПКРС - 2</title>
+<h1 align = 'center'>Automated system of optimal cattle selection for breeding</h1>
+<p></p>
+<body>
+    <p></p>
+    <div class = 'container'>
+        <div class = 'row'>
+            <div class = 'col-sm'>
+                <h3 align = 'center'>The first Breed</h3>
+                <table align = 'center' bgcolor = #b6b6b6 style ='width:480px'>
+                    <tr align = 'center' ><th colspan="3"> <h4>The first breed data processing</h4></th></tr>
+                    <form method="POST" action="/add_message">
+                        <tr>
+                        <td align = 'center' style="width: 120px"><h5>Year</h5></td>
+                        <td align = 'center' style="width: 140px"><h5>Enter the average yield for the year</h5></td>
+                        <td align = 'center' style="width: 120px"><h5>Enter dotation</h5></td>
+                        </tr>
+
+                        <tr>
+                        <td align = 'center'><h5>1-st</h5></td>
+                        <td align = 'center'><input type='FloatField' name = "perviy_god" style="width: 100px" placeholder = "123.455" required></td>
+                        <td align = 'center'><input type='FloatField' name = "dot_perviy_god" style="width: 100px" placeholder = "123.455" required></td>
+                        </tr>
+                        
+                        <tr>
+                        <td align = 'center'><h5>2-nd</h5></td>
+                        <td align = 'center'><input type='FloatField' name = "vtoroy_god" style="width: 100px" placeholder = "123.455" required></td>
+                        <td align = 'center'><input type='FloatField' name = "dot_vtoroy_god" style = 'width: 100px' placeholder = "123.455" required></td>
+                        </tr>
+
+                        <tr>
+                        <td align = 'center'><h5>3-rd</h5></td>
+                        <td align = 'center'><input type='FloatField' name = "tretiy_god" style='width: 100px' placeholder = "123.455" required></td>
+                        <td align = 'center'><input type='FloatField' name = "dot_tretiy_god" style='width: 100px' placeholder = "123.455" required></td>
+                        </tr>
+
+                        <tr>
+                        <td align = 'center'><h5>4-th</h5></td>
+                        <td align = 'center'><input type='FloatField' name = "chetvertiy_god" style='width:100px' placeholder = "123.455" required></td>
+                        <td align = 'center'><input type='FloatField' name = "dot_chetvertiy_god" style='width:100px' placeholder = "123.455" required></td>
+                        </tr>
+
+                        <tr>
+                        <td align = 'center'><h5>5-th</h5></td>
+                        <td align = 'center'><input type='FloatField' name = "pyatiy_god" style = 'width:100px' placeholder = "123.455" required></td>
+                        <td align = 'center'><input type='FloatField' name = "dot_pyatiy_god" style = 'width:100px' placeholder = "123.455" required></td>
+                        </tr>
+                        <p></p>
+                        <tr align = 'center'><th colspan="3"><button type="submit">START</button></th></tr>
+                    </form>
+                    <tr><th colspan="3">   
+                        <h3 align = 'center'>Calculation History</h3>
+                        {% for message in messages %}
+                        <div align = 'center'>Yeild variation{{ message.ustoychivost}}&nbsp;<i> {{message.znachenie[0]}}</i></div>
+                        <div align = 'center'>Borrowing yeild and subsidies{{ message.ustoychivost}}&nbsp;<i> {{message.znachenie[1]}}</i></div>
+                        <p><h5 align = 'center'>Dotation forecast</h5></p>
+                        
+                        <div align = 'center'>(1-st year)&nbsp;<i> {{message.znachenie[3]}}</i></div>
+                        <div align = 'center'>(2-nd year)&nbsp;<i> {{message.znachenie[4]}}</i></div>
+                        <div align = 'center'>(3-d year)&nbsp;<i> {{message.znachenie[5]}}</i></div>
+                        <div align = 'center'>(4-th year)&nbsp;<i> {{message.znachenie[6]}}</i></div>
+                        <div align = 'center'>(5-th year)&nbsp;<i> {{message.znachenie[7]}}</i></div>
+                        <p></p>
+                        {% endfor %}
+                    </th></tr>  
+                                 
+                </table>
+            </div>
+            <div class = 'col-sm'>
+                <h3 align = 'center'>The second breed</h3>
+                <table align = 'center' bgcolor = #20a0c0 style ='width:480px'>
+                    <tr align = 'center' ><th colspan="3"> <h4>The second breed data processing</h4></th></tr>
+                    <form method="POST" action="/add">
+                        <tr>
+                        <td align = 'center' style="width: 120px"><h5>Year</h5></td>
+                        <td align = 'center' style="width: 140px"><h5>Enter the average yield for the year</h5></td>
+                        <td align = 'center' style="width: 120px"><h5>Enter dotation</h5></td>
+                        </tr>
+
+                        <tr>
+                        <td align = 'center'><h5>1-st</h5></td>
+                        <td align = 'center'><input type='FloatField' name = "perviy_god2" style="width: 100px" placeholder = "123.455" required type='float'></td>
+                        <td align = 'center'><input type='FloatField' name = "dot_perviy_god2" style="width: 100px" placeholder = "123.455" required></td>
+                        </tr>
+                        
+                        <tr>
+                        <td align = 'center'><h5>2-nd</h5></td>
+                        <td align = 'center'><input type='FloatField' name = "vtoroy_god2" style="width: 100px" placeholder = "123.455" required></td>
+                        <td align = 'center'><input type='FloatField' name = "dot_vtoroy_god2" style = 'width: 100px' placeholder = "123.455" required></td>
+                        </tr>
+
+                        <tr>
+                        <td align = 'center'><h5>3-rd</h5></td>
+                        <td align = 'center'><input type='FloatField' name = "tretiy_god2" style='width: 100px' placeholder = "123.455" required></td>
+                        <td align = 'center'><input type='FloatField' name = "dot_tretiy_god2" style='width: 100px' placeholder = "123.455" required></td>
+                        </tr>
+
+                        <tr>
+                        <td align = 'center'><h5>4-th</h5></td>
+                        <td align = 'center'><input type='FloatField' name = "chetvertiy_god2" style='width:100px' placeholder = "123.455" required></td>
+                        <td align = 'center'><input type='FloatField' name = "dot_chetvertiy_god2" style='width:100px' placeholder = "123.455" required></td>
+                        </tr>
+
+                        <tr>
+                        <td align = 'center'><h5>5-th</h5></td>
+                        <td align = 'center'><input type='FloatField' name = "pyatiy_god2" style = 'width:100px' placeholder = "123.455" required></td>
+                        <td align = 'center'><input type='FloatField' name = "dot_pyatiy_god2" style = 'width:100px' placeholder = "123.455" required></td>
+                        </tr>
+                        <p></p>
+                        <tr align = 'center'><th colspan="3"><button type="submit">START</button></th></tr>
+                    </form>
+                    <tr><th colspan="3">   
+                        <h3 align = 'center'>Calculation History</h3>
+                        {% for message2 in messages2 %}
+                        <div align = 'center'>Yeild variation&nbsp;<i> {{message2.znachenie[0]}}</i></div>
+                        <div align = 'center'>Borrowing yeild and subsidies&nbsp;<i> {{message2.znachenie[1]}}</i></div>
+                        <p><h5 align = 'center'>Dotation forecast</h5></p>
+                        <div align = 'center'>(1-st year)&nbsp;<i> {{message2.znachenie[3]}}</i></div>
+                        <div align = 'center'>(2-nd year)&nbsp;<i> {{message2.znachenie[4]}}</i></div>
+                        <div align = 'center'>(3-d year)&nbsp;<i> {{message2.znachenie[5]}}</i></div>
+                        <div align = 'center'>(4-th year)&nbsp;<i> {{message2.znachenie[6]}}</i></div>
+                        <div align = 'center'>(5-th year)&nbsp;<i> {{message2.znachenie[7]}}</i></div>
+                        <p></p>
+                        {% endfor %}
+                    </th></tr>                    
+                </table>
+            </div>
+        </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </body>
+</html>
