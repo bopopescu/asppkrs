@@ -197,7 +197,89 @@ def variaciya2():
     return redirect(url_for('main'))
 
 
+@app.route('/deeper' , methods=['POST'])
+def deeper():
+    selfprice1 = float(request.form['selfprice1'])
+    selfprice2 = float(request.form['selfprice2'])
+    selfprice3 = float(request.form['selfprice3'])
+    selfprice4 = float(request.form['selfprice4'])
+    selfprice5 = float(request.form['selfprice5'])
+    total_selfprice = (selfprice1, selfprice2, selfprice3, selfprice4, selfprice5)
+    
+    subsidies1 = float(request.form['subsidies1'])
+    subsidies2 = float(request.form['subsidies2'])
+    subsidies3 = float(request.form['subsidies3'])
+    subsidies4 = float(request.form['subsidies4'])
+    subsidies5 = float(request.form['subsidies5'])
+    total_subsidies = (subsidies1, subsidies2, subsidies3, subsidies4, subsidies5)
 
+    tradeprice1 = float(request.form['tradeprice1'])
+    tradeprice2 = float(request.form['tradeprice2'])
+    tradeprice3 = float(request.form['tradeprice3'])
+    tradeprice4 = float(request.form['tradeprice4'])
+    tradeprice5 = float(request.form['tradeprice5'])
+    total_tradeprice = (tradeprice1, tradeprice2, tradeprice3, tradeprice4, tradeprice5)
+
+    rent_with_sub1 = float(request.form['rent_with_sub1'])
+    rent_with_sub2 = float(request.form['rent_with_sub2'])
+    rent_with_sub3 = float(request.form['rent_with_sub3'])
+    rent_with_sub4 = float(request.form['rent_with_sub4'])
+    rent_with_sub5 = float(request.form['rent_with_sub5'])
+    total_rent_with_sub = (rent_with_sub1, rent_with_sub2, rent_with_sub3, rent_with_sub4, rent_with_sub5)
+
+    rent_without_sub1 = float(request.form['rent_without_sub1'])
+    rent_without_sub2 = float(request.form['rent_without_sub2'])
+    rent_without_sub3 = float(request.form['rent_without_sub3'])
+    rent_without_sub4 = float(request.form['rent_without_sub4'])
+    rent_without_sub5 = float(request.form['rent_without_sub5'])
+    total_rent_without_sub = (rent_without_sub1, rent_without_sub2, rent_without_sub3, rent_without_sub4, rent_without_sub5)
+
+
+    lifetime1 = float(request.form['lifetime1'])
+    lifetime2 = float(request.form['lifetime2'])
+    lifetime3 = float(request.form['lifetime3'])
+    lifetime4 = float(request.form['lifetime4'])
+    lifetime5 = float(request.form['lifetime5'])
+    total_lifetime = (lifetime1, lifetime2, lifetime3, lifetime4, lifetime5)
+
+    offspring1= float(request.form['offspring1'])
+    offspring2= float(request.form['offspring2'])
+    offspring3= float(request.form['offspring3'])
+    offspring4= float(request.form['offspring4'])
+    offspring5= float(request.form['offspring5'])
+    total_offspring = (offspring1, offspring2, offspring3, offspring4, offspring5)
+
+    mortality1 = float(request.form['mortality1'])
+    mortality2 = float(request.form['mortality2'])
+    mortality3 = float(request.form['mortality3'])
+    mortality4 = float(request.form['mortality4'])
+    mortality5 = float(request.form['mortality5'])
+    total_mortality = (mortality1, mortality2, mortality3, mortality4, mortality5)
+
+    yeild1 = float(request.form['yeild1'])
+    yeild2 = float(request.form['yeild2'])
+    yeild3 = float(request.form['yeild3'])
+    yeild4 = float(request.form['yeild4'])
+    yeild5 = float(request.form['yeild5'])
+    total_yeild = (yeild1, yeild2, yeild3, yeild4, yeild5)
+
+    fat_content1 = float(request.form['fat_content1'])
+    fat_content2 = float(request.form['fat_content2'])
+    fat_content3 = float(request.form['fat_content3'])
+    fat_content4 = float(request.form['fat_content4'])
+    fat_content5 = float(request.form['fat_content5'])
+    total_fat_content = (fat_content1, fat_content2, fat_content3, fat_content4, fat_content5)
+
+    protein_content1 = float(request.form['protein_content1'])
+    protein_content2 = float(request.form['protein_content2'])
+    protein_content3 = float(request.form['protein_content3'])
+    protein_content4 = float(request.form['protein_content4'])
+    protein_content5 = float(request.form['protein_content5'])
+    total_protein_content = (protein_content1, protein_content2, protein_content3, protein_content4, protein_content5)
+    
+
+
+    return
 
 
 #ДЛЯ РАССШИРЕННОГО ПРИЛОЖЕНИЯ
