@@ -296,10 +296,11 @@ def deeper():
 
         ]), ) #скобка закрывающая кортеж и его результат
 
+    return redirect(url_for('expanded')), var_total_selfprice
 
-    return redirect(url_for('expanded')) 
 
 
+print (var_total_selfprice))
 
 #ДЛЯ РАССШИРЕННОГО ПРИЛОЖЕНИЯ
 db = SQLAlchemy() # РАССШИРЕННОЕ
@@ -337,14 +338,6 @@ class CowsBreeds (db.Model):
 
 
 
-
-
-
-
-
-
-
-
 # Попытка построить график. Но это немного попозже
 @app.route('/line')
 def line():
@@ -354,9 +347,6 @@ def line():
     line_labels=labels
     line_values=values
     return render_template('line_chart.html', title='Тут будет прогноз методом наименьших квадратов', min=0, max=500, labels=line_labels, values=line_values)
-
-
-    
 
 
 
