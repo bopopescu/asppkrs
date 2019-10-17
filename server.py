@@ -300,8 +300,6 @@ def deeper():
 
 
 
-print (var_total_selfprice))
-
 #ДЛЯ РАССШИРЕННОГО ПРИЛОЖЕНИЯ
 db = SQLAlchemy() # РАССШИРЕННОЕ
 def create_app():
