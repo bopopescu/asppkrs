@@ -296,7 +296,7 @@ def deeper():
 
         ]), ) #скобка закрывающая кортеж и его результат
 
-    return redirect(url_for('expanded')), var_total_selfprice
+    return redirect(url_for('expanded'))
 
 
 
