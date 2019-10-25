@@ -225,122 +225,122 @@ def deeper():
     total_subsidies = (subsidies1, subsidies2, subsidies3, subsidies4, subsidies5)
     var_total_subsidies = round(np.std(total_subsidies, ddof=1)/np.average(total_subsidies)*100,3)
 
-    #tradeprice1 = float(request.form['tradeprice1'])
-    #tradeprice2 = float(request.form['tradeprice2'])
-    #tradeprice3 = float(request.form['tradeprice3'])
-    #tradeprice4 = float(request.form['tradeprice4'])
-    #tradeprice5 = float(request.form['tradeprice5'])
-    #total_tradeprice = (tradeprice1, tradeprice2, tradeprice3, tradeprice4, tradeprice5)
-    #var_total_tradeprice = round(np.std(total_tradeprice, ddof=1)/np.average(total_tradeprice)*100,3)
+    tradeprice1 = float(request.form['tradeprice1'])
+    tradeprice2 = float(request.form['tradeprice2'])
+    tradeprice3 = float(request.form['tradeprice3'])
+    tradeprice4 = float(request.form['tradeprice4'])
+    tradeprice5 = float(request.form['tradeprice5'])
+    total_tradeprice = (tradeprice1, tradeprice2, tradeprice3, tradeprice4, tradeprice5)
+    var_total_tradeprice = round(np.std(total_tradeprice, ddof=1)/np.average(total_tradeprice)*100,3)
 
-    #rent_with_sub1 = float(request.form['rent_with_sub1'])
-    #rent_with_sub2 = float(request.form['rent_with_sub2'])
-    #rent_with_sub3 = float(request.form['rent_with_sub3'])
-    #rent_with_sub4 = float(request.form['rent_with_sub4'])
-    #rent_with_sub5 = float(request.form['rent_with_sub5'])
-    #total_rent_with_sub = (rent_with_sub1, rent_with_sub2, rent_with_sub3, rent_with_sub4, rent_with_sub5)
-    #var_total_rent_with_sub = round(np.std(total_rent_with_sub, ddof=1)/np.average(total_rent_with_sub)*100, 3)
+    rent_with_sub1 = float(request.form['rent_with_sub1'])
+    rent_with_sub2 = float(request.form['rent_with_sub2'])
+    rent_with_sub3 = float(request.form['rent_with_sub3'])
+    rent_with_sub4 = float(request.form['rent_with_sub4'])
+    rent_with_sub5 = float(request.form['rent_with_sub5'])
+    total_rent_with_sub = (rent_with_sub1, rent_with_sub2, rent_with_sub3, rent_with_sub4, rent_with_sub5)
+    var_total_rent_with_sub = round(np.std(total_rent_with_sub, ddof=1)/np.average(total_rent_with_sub)*100, 3)
 
-    #rent_without_sub1 = float(request.form['rent_without_sub1'])
-    #rent_without_sub2 = float(request.form['rent_without_sub2'])
-    #rent_without_sub3 = float(request.form['rent_without_sub3'])
-    #rent_without_sub4 = float(request.form['rent_without_sub4'])
-    #rent_without_sub5 = float(request.form['rent_without_sub5'])
-    #total_rent_without_sub = (rent_without_sub1, rent_without_sub2, rent_without_sub3, rent_without_sub4, rent_without_sub5)
-    #var_total_rent_without_sub= round(np.std(total_rent_without_sub, ddof=1)/np.average(total_rent_without_sub)*100 ,3)
+    rent_without_sub1 = float(request.form['rent_without_sub1'])
+    rent_without_sub2 = float(request.form['rent_without_sub2'])
+    rent_without_sub3 = float(request.form['rent_without_sub3'])
+    rent_without_sub4 = float(request.form['rent_without_sub4'])
+    rent_without_sub5 = float(request.form['rent_without_sub5'])
+    total_rent_without_sub = (rent_without_sub1, rent_without_sub2, rent_without_sub3, rent_without_sub4, rent_without_sub5)
+    var_total_rent_without_sub= round(np.std(total_rent_without_sub, ddof=1)/np.average(total_rent_without_sub)*100 ,3)
 
-    #lifetime1 = float(request.form['lifetime1'])
-    #lifetime2 = float(request.form['lifetime2'])
-    #lifetime3 = float(request.form['lifetime3'])
-    #lifetime4 = float(request.form['lifetime4'])
-    #lifetime5 = float(request.form['lifetime5'])
-    #total_lifetime = (lifetime1, lifetime2, lifetime3, lifetime4, lifetime5)
-    #var_total_lifetime= round(np.std(total_lifetime, ddof=1)/np.average(total_lifetime)*100, 3)
+    lifetime1 = float(request.form['lifetime1'])
+    lifetime2 = float(request.form['lifetime2'])
+    lifetime3 = float(request.form['lifetime3'])
+    lifetime4 = float(request.form['lifetime4'])
+    lifetime5 = float(request.form['lifetime5'])
+    total_lifetime = (lifetime1, lifetime2, lifetime3, lifetime4, lifetime5)
+    var_total_lifetime= round(np.std(total_lifetime, ddof=1)/np.average(total_lifetime)*100, 3)
 
 
-    #offspring1= float(request.form['offspring1'])
-    #offspring2= float(request.form['offspring2'])
-    #offspring3= float(request.form['offspring3'])
-    #offspring4= float(request.form['offspring4'])
-    #offspring5= float(request.form['offspring5'])
-    #total_offspring = (offspring1, offspring2, offspring3, offspring4, offspring5)
-    #var_total_offspring= round(np.std(total_offspring, ddof=1)/np.average(total_offspring)*100, 3)
+    offspring1= float(request.form['offspring1'])
+    offspring2= float(request.form['offspring2'])
+    offspring3= float(request.form['offspring3'])
+    offspring4= float(request.form['offspring4'])
+    offspring5= float(request.form['offspring5'])
+    total_offspring = (offspring1, offspring2, offspring3, offspring4, offspring5)
+    var_total_offspring= round(np.std(total_offspring, ddof=1)/np.average(total_offspring)*100, 3)
 
-    #mortality1 = float(request.form['mortality1'])
-    #mortality2 = float(request.form['mortality2'])
-    #mortality3 = float(request.form['mortality3'])
-    #mortality4 = float(request.form['mortality4'])
-    #mortality5 = float(request.form['mortality5'])
-    #total_mortality = (mortality1, mortality2, mortality3, mortality4, mortality5)
-    #var_total_mortality= round (np.std(total_mortality, ddof=1)/np.average(total_mortality)*100, 3)
+    mortality1 = float(request.form['mortality1'])
+    mortality2 = float(request.form['mortality2'])
+    mortality3 = float(request.form['mortality3'])
+    mortality4 = float(request.form['mortality4'])
+    mortality5 = float(request.form['mortality5'])
+    total_mortality = (mortality1, mortality2, mortality3, mortality4, mortality5)
+    var_total_mortality= round (np.std(total_mortality, ddof=1)/np.average(total_mortality)*100, 3)
 
-    #yeild1 = float(request.form['yeild1'])
-    #yeild2 = float(request.form['yeild2'])
-    #yeild3 = float(request.form['yeild3'])
-    #yeild4 = float(request.form['yeild4'])
-    #yeild5 = float(request.form['yeild5'])
-    #total_yeild = (yeild1, yeild2, yeild3, yeild4, yeild5)
-    #var_total_yeild= round (np.std(total_yeild, ddof=1)/np.average(total_yeild)*100, 3)
+    yeild1 = float(request.form['yeild1'])
+    yeild2 = float(request.form['yeild2'])
+    yeild3 = float(request.form['yeild3'])
+    yeild4 = float(request.form['yeild4'])
+    yeild5 = float(request.form['yeild5'])
+    total_yeild = (yeild1, yeild2, yeild3, yeild4, yeild5)
+    var_total_yeild= round (np.std(total_yeild, ddof=1)/np.average(total_yeild)*100, 3)
 
-    #fat_content1 = float(request.form['fat_content1'])
-    #fat_content2 = float(request.form['fat_content2'])
-    #fat_content3 = float(request.form['fat_content3'])
-    #fat_content4 = float(request.form['fat_content4'])
-    #fat_content5 = float(request.form['fat_content5'])
-    #total_fat_content = (fat_content1, fat_content2, fat_content3, fat_content4, fat_content5)
-    #var_fat_content= round (np.std(total_fat_content, ddof=1)/np.average(total_fat_content)*100, 3)
+    fat_content1 = float(request.form['fat_content1'])
+    fat_content2 = float(request.form['fat_content2'])
+    fat_content3 = float(request.form['fat_content3'])
+    fat_content4 = float(request.form['fat_content4'])
+    fat_content5 = float(request.form['fat_content5'])
+    total_fat_content = (fat_content1, fat_content2, fat_content3, fat_content4, fat_content5)
+    var_fat_content= round (np.std(total_fat_content, ddof=1)/np.average(total_fat_content)*100, 3)
 
-    #protein_content1 = float(request.form['protein_content1'])
-    #protein_content2 = float(request.form['protein_content2'])
-    #protein_content3 = float(request.form['protein_content3'])
-    #protein_content4 = float(request.form['protein_content4'])
-    #protein_content5 = float(request.form['protein_content5'])
-    #total_protein_content = (protein_content1, protein_content2, protein_content3, protein_content4, protein_content5)
-    #var_total_protein_content= round (np.std(total_protein_content, ddof=1)/np.average(total_protein_content)*100, 3)
+    protein_content1 = float(request.form['protein_content1'])
+    protein_content2 = float(request.form['protein_content2'])
+    protein_content3 = float(request.form['protein_content3'])
+    protein_content4 = float(request.form['protein_content4'])
+    protein_content5 = float(request.form['protein_content5'])
+    total_protein_content = (protein_content1, protein_content2, protein_content3, protein_content4, protein_content5)
+    var_total_protein_content= round (np.std(total_protein_content, ddof=1)/np.average(total_protein_content)*100, 3)
 
 
     #Корреляция себестоимости и дотаций, но это пример, пусть пока считает
     #corr_total_selfprice_total_subsidies = np.corrcoef (total_selfprice, total_subsidies)
 
     
-    #corr_total_selfprice_total_offspring = round(np.corrcoef (total_selfprice, total_offspring) ,3)
-    #corr_total_selfprice_total_mortality = round(np.corrcoef (total_selfprice, total_mortality), 3)
-    #corr_total_selfprice_total_lifetime = round(np.corrcoef (total_selfprice, total_lifetime), 3)
-    #corr_total_selfprice_total_yeild = round(np.corrcoef (total_selfprice, total_yeild), 3)
+    corr_total_selfprice_total_offspring = np.round(np.corrcoef (total_selfprice, total_offspring),3)
+    corr_total_selfprice_total_mortality = np.round(np.corrcoef (total_selfprice, total_mortality),3)
+    corr_total_selfprice_total_lifetime = np.round(np.corrcoef (total_selfprice, total_lifetime),3)
+    corr_total_selfprice_total_yeild = np.round(np.corrcoef (total_selfprice, total_yeild),3)
 
-    #corr_total_subsidies_total_offspring = round (np.corrcoef (total_subsidies, total_offspring),3)
-    #corr_total_subsidies_total_mortality = round(np.corrcoef (total_subsidies, total_mortality),3)
-    #corr_total_subsidies_total_lifetime = round(np.corrcoef (total_subsidies, total_lifetime),3)
-    #corr_total_subsidies_total_yeild = round(np.corrcoef (total_subsidies, total_yeild), 3)
+    corr_total_subsidies_total_offspring = np.round(np.corrcoef (total_subsidies, total_offspring),3)
+    corr_total_subsidies_total_mortality = np.round(np.corrcoef (total_subsidies, total_mortality),3)
+    corr_total_subsidies_total_lifetime = np.round(np.corrcoef (total_subsidies, total_lifetime),3)
+    corr_total_subsidies_total_yeild = np.round(np.corrcoef (total_subsidies, total_yeild),3)
 
-    #corr_total_tradeprice_total_rent_with_sub= round (np.corrcoef (total_tradeprice, total_rent_with_sub), 3)
-    #corr_total_tradeprice_total_offspring= round (np.corrcoef (total_tradeprice, total_offspring), 3)
-    #corr_total_tradeprice_total_mortality= round (np.corrcoef (total_tradeprice, total_mortality), 3)
+    corr_total_tradeprice_total_rent_with_sub= np.round(np.corrcoef (total_tradeprice, total_rent_with_sub),3)
+    corr_total_tradeprice_total_offspring= np.round(np.corrcoef (total_tradeprice, total_offspring),3)
+    corr_total_tradeprice_total_mortality= np.round(np.corrcoef (total_tradeprice, total_mortality),3)
 
-    #corr_total_rent_without_sub_total_yeild= round(np.corrcoef (total_rent_without_sub, total_yeild),3)
+    corr_total_rent_without_sub_total_yeild= np.round(np.corrcoef (total_rent_without_sub, total_yeild),3)
 
-    #corr_total_offspring_total_yeild= round(np.corrcoef (total_offspring, total_yeild), 3)
-    #corr_total_offspring_total_mortality= round (np.corrcoef (total_offspring, total_mortality), 3)
+    corr_total_offspring_total_yeild= np.round(np.corrcoef (total_offspring, total_yeild),3)
+    corr_total_offspring_total_mortality= np.round(np.corrcoef (total_offspring, total_mortality),3)
 
-    #corr_total_yeild_total_fat_content= round(np.corrcoef (total_yeild, total_fat_content), 3)
-    #corr_total_protein_content= round(np.corrcoef (total_yeild, total_protein_content), 3)
+    corr_total_yeild_total_fat_content= np.round(np.corrcoef (total_yeild, total_fat_content),3)
+    corr_total_protein_content= np.round(np.corrcoef (total_yeild, total_protein_content),3)
 
 
     messages3.append(Message3([ #скобка открывающая кортеж
         #summ # возврат значения, указанного в функции, summ и есть это значение   
 
-        var_total_selfprice, var_total_subsidies #, var_total_tradeprice, var_total_rent_with_sub, var_total_rent_without_sub
-        #var_total_lifetime, var_total_offspring, var_total_mortality, var_total_yeild,
-        #var_fat_content, var_total_protein_content,
+        var_total_selfprice, var_total_subsidies, var_total_tradeprice, var_total_rent_with_sub, var_total_rent_without_sub,
+        var_total_lifetime, var_total_offspring, var_total_mortality, var_total_yeild,
+        var_fat_content, var_total_protein_content,
         
-        #corr_total_selfprice_total_offspring [0,1], corr_total_selfprice_total_mortality [0,1],
-        #corr_total_selfprice_total_lifetime [0,1], corr_total_selfprice_total_yeild  [0,1],
-        #corr_total_subsidies_total_offspring [0,1], corr_total_subsidies_total_mortality [0,1], 
-        #corr_total_subsidies_total_lifetime [0,1], corr_total_subsidies_total_yeild [0,1],
-        #corr_total_tradeprice_total_rent_with_sub [0,1], corr_total_tradeprice_total_offspring [0,1],
-        #corr_total_tradeprice_total_mortality [0,1], corr_total_rent_without_sub_total_yeild [0,1],
-        #corr_total_offspring_total_yeild [0,1], corr_total_offspring_total_mortality [0,1],
-        #corr_total_yeild_total_fat_content [0,1], corr_total_protein_content [0,1],
+        corr_total_selfprice_total_offspring [0,1], corr_total_selfprice_total_mortality [0,1],
+        corr_total_selfprice_total_lifetime [0,1], corr_total_selfprice_total_yeild  [0,1],
+        corr_total_subsidies_total_offspring [0,1], corr_total_subsidies_total_mortality [0,1], 
+        corr_total_subsidies_total_lifetime [0,1], corr_total_subsidies_total_yeild [0,1],
+        corr_total_tradeprice_total_rent_with_sub [0,1], corr_total_tradeprice_total_offspring [0,1],
+        corr_total_tradeprice_total_mortality [0,1], corr_total_rent_without_sub_total_yeild [0,1],
+        corr_total_offspring_total_yeild [0,1], corr_total_offspring_total_mortality [0,1],
+        corr_total_yeild_total_fat_content [0,1], corr_total_protein_content [0,1],
 
 
 
