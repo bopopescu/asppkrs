@@ -289,6 +289,78 @@
     </div>
 </div>
 
+<p></p>
+
+<h3 align = 'center'>Calculation History (Forecast)</h3>
+<span width = "600">
+    <div class="row">
+        <div class='col-sm'>
+            <table align = 'center'>
+                <tr>
+                    <td height="30" width = "50">Year</td>
+                    <td height="30" width = "50">1-st</td>
+                    <td height="30" width = "50">2-nd</td>
+                    <td height="30" width = "50">3-rd</td>
+                    <td height="30" width = "50">4-th</td>
+                    <td height="30" width = "50">5-th</td>
+                </tr>
+                <tr>
+                    <td>Subsidies</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[0]}} {% endfor %}</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[1]}} {% endfor %}</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[2]}} {% endfor %}</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[3]}} {% endfor %}</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[4]}} {% endfor %}</td>
+                </tr>
+                <tr>
+                    <td>Yeild</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[5]}} {% endfor %}</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[6]}} {% endfor %}</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[7]}} {% endfor %}</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[8]}} {% endfor %}</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[9]}} {% endfor %}</td>
+                </tr>
+                <tr>
+                    <td>Lifetime</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[10]}} {% endfor %}</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[11]}} {% endfor %}</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[12]}} {% endfor %}</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[13]}} {% endfor %}</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[14]}} {% endfor %}</td>
+                </tr>
+                <tr>
+                    <td>Offspring</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[15]}} {% endfor %}</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[16]}} {% endfor %}</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[17]}} {% endfor %}</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[18]}} {% endfor %}</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[19]}} {% endfor %}</td>
+                </tr>
+                <tr>
+                    <td>Mortality</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[20]}} {% endfor %}</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[21]}} {% endfor %}</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[22]}} {% endfor %}</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[23]}} {% endfor %}</td>
+                    <td>{% for prognoz in prognozs %}  {{prognoz.prognoz[24]}} {% endfor %}</td>
+                </tr>
+        </table>
+        </div>
+    </div>
+</span>
+<h3>{% for prognoz in prognozs %}  {{prognoz.prognoz[0]}} {% endfor %}</h3>
+<h3>{% for prognoz in prognozs %}  {{prognoz.prognoz[1]}} {% endfor %}</h3>
+<h3>{% for prognoz in prognozs %}  {{prognoz.prognoz[2]}} {% endfor %}</h3>
+<h3>{% for prognoz in prognozs %}  {{prognoz.prognoz[3]}} {% endfor %}</h3>
+<h3>{% for prognoz in prognozs %}  {{prognoz.prognoz[4]}} {% endfor %}</h3>
+<p></p>
+<h3>{% for prognoz in prognozs %}  {{prognoz.prognoz[5]}} {% endfor %}</h3>
+<h3>{% for prognoz in prognozs %}  {{prognoz.prognoz[6]}} {% endfor %}</h3>
+<h3>{% for prognoz in prognozs %}  {{prognoz.prognoz[7]}} {% endfor %}</h3>
+<h3>{% for prognoz in prognozs %}  {{prognoz.prognoz[8]}} {% endfor %}</h3>
+<h3>{% for prognoz in prognozs %}  {{prognoz.prognoz[9]}} {% endfor %}</h3>
+
+
 
 <title>Круговая диаграмма</title>
 <script src="https://www.google.com/jsapi"></script>

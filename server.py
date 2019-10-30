@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy # РАССШИРЕННОЕ
 
 from flask import Flask,render_template, redirect, url_for, request
 import numpy as np
+import pandas as pd
 
 app=Flask(__name__) # __name__   -   имя текущего файла
 
@@ -14,6 +15,9 @@ messages2 = [] #коллекция, которая будет хранить в�
 
 Message3 = namedtuple('ustoychivost', 'znachenie')
 messages3 = []
+
+Prognoz = namedtuple('ustoychivost', 'prognoz')
+prognozs = []
 
 
 
@@ -203,11 +207,10 @@ def variaciya2():
 
 @app.route('/expanded', methods=['GET', 'POST'])
 def expanded():
-    return render_template('expanded.html', messages3=messages3)
+    return render_template('expanded.html', messages3=messages3, prognozs=prognozs)
 
 @app.route('/deeper' , methods=['POST'])
 def deeper():
-    total_count = (1,2,3,4,5)
 
     selfprice1 = float(request.form['selfprice1'])
     selfprice2 = float(request.form['selfprice2'])
@@ -325,6 +328,9 @@ def deeper():
     corr_total_yeild_total_fat_content= np.round(np.corrcoef (total_yeild, total_fat_content),3)
     corr_total_protein_content= np.round(np.corrcoef (total_yeild, total_protein_content),3)
 
+    #рассчет прогнозируемых трендов и значений. интересно даже что именно получится
+
+
 
     messages3.append(Message3([ #скобка открывающая кортеж
         #summ # возврат значения, указанного в функции, summ и есть это значение   
@@ -342,12 +348,123 @@ def deeper():
         corr_total_offspring_total_yeild [0,1], corr_total_offspring_total_mortality [0,1],
         corr_total_yeild_total_fat_content [0,1], corr_total_protein_content [0,1],
 
+        ]), ) #скобка закрывающая кортеж и его результат
 
 
+    CountDataYeild = pd.DataFrame ({
+        'god': [1, 2, 3, 4, 5],
+        'yeild': [yeild1, yeild2, yeild3, yeild4, yeild5], 
+        })
+
+    def naim_kvadrat (CountDataYeild):
+        dotacii_po_godam = CountDataYeild['yeild']
+        id1 = CountDataYeild['god']
+        
+        chislitel_vichitaemoe_summa = 0
+        for i,j in zip (dotacii_po_godam, id1):
+            chislitel_vichitaemoe_summa  = i * j + chislitel_vichitaemoe_summa
+        
+        chislitel_vychetaemoe = chislitel_vichitaemoe_summa # потом домножить на 5ю посмотрим что будет
+
+        summa_dotacii = 0
+        for i in dotacii_po_godam:
+            summa_dotacii = i + summa_dotacii
+
+        summa_goda = 0
+        for i in id1:
+            summa_goda = i + summa_goda
+        
+        chislitel = chislitel_vychetaemoe * 5 - (summa_goda * summa_dotacii)
+        kolichestvo_izmereniy_dotirovaniya = len (CountDataYeild['yeild'])
+
+        znamenatel_vichitaemoe1 = 0
+        for i in id1:
+            znamenatel_vichitaemoe1 = (np.square (i)) + znamenatel_vichitaemoe1
+
+        znamenatel_vichitaemoe = znamenatel_vichitaemoe1 * len(CountDataYeild['yeild'])
+
+        znamenatal_vichitatel1 = 0
+        for i in id1:
+            znamenatal_vichitatel1  = i + znamenatal_vichitatel1
+        
+        znamenatal_vichitatel = np.square (znamenatal_vichitatel1)
+
+        znamenatel = znamenatel_vichitaemoe - znamenatal_vichitatel
+        znamenatel
+
+        koef = chislitel/znamenatel
+        
+        return (koef)
+    naim_kvadrat(CountDataYeild)
+
+    CountDataSubsidies = pd.DataFrame ({
+        'god': [1, 2, 3, 4, 5],
+        'yeild': [subsidies1, subsidies2, subsidies3, subsidies4, subsidies5], 
+        })
+    naim_kvadrat(CountDataSubsidies)
+
+    CountDataOffspring = pd.DataFrame ({
+        'god': [1, 2, 3, 4, 5],
+        'yeild': [offspring1, offspring2, offspring3, offspring4, offspring5], 
+        })
+    naim_kvadrat(CountDataOffspring)
+
+    CountDataLifetime = pd.DataFrame ({
+        'god': [1, 2, 3, 4, 5],
+        'yeild': [lifetime1, lifetime2, lifetime3, lifetime4, lifetime5], 
+        })
+    naim_kvadrat(CountDataLifetime)
+
+    CountDataMortality = pd.DataFrame ({
+        'god': [1, 2, 3, 4, 5],
+        'yeild': [mortality1, mortality2, mortality3, mortality4, mortality5], 
+        })
+    naim_kvadrat(CountDataMortality)
+
+    yeild6=np.round(yeild5+naim_kvadrat(CountDataYeild),3)
+    yeild7=np.round(yeild6+naim_kvadrat(CountDataYeild),3)
+    yeild8=np.round(yeild7+naim_kvadrat(CountDataYeild),3)
+    yeild9=np.round(yeild8+naim_kvadrat(CountDataYeild),3)
+    yeild10=np.round(yeild9+naim_kvadrat(CountDataYeild),3)
+
+    subsidies6=np.round(subsidies5+naim_kvadrat(CountDataSubsidies),3)
+    subsidies7=np.round(subsidies6+naim_kvadrat(CountDataSubsidies),3)
+    subsidies8=np.round(subsidies7+naim_kvadrat(CountDataSubsidies),3)
+    subsidies9=np.round(subsidies8+naim_kvadrat(CountDataSubsidies),3)
+    subsidies10=np.round(subsidies9+naim_kvadrat(CountDataSubsidies),3)
+
+    lifetime6=np.round(subsidies5+naim_kvadrat(CountDataLifetime),3)
+    lifetime7=np.round(subsidies6+naim_kvadrat(CountDataLifetime),3)
+    lifetime8=np.round(subsidies7+naim_kvadrat(CountDataLifetime),3)
+    lifetime9=np.round(subsidies8+naim_kvadrat(CountDataLifetime),3)
+    lifetime10=np.round(subsidies9+naim_kvadrat(CountDataLifetime),3)
+
+    offspring6=np.round(offspring5+naim_kvadrat(CountDataOffspring),3)
+    offspring7=np.round(offspring6+naim_kvadrat(CountDataOffspring),3)
+    offspring8=np.round(offspring7+naim_kvadrat(CountDataOffspring),3)
+    offspring9=np.round(offspring8+naim_kvadrat(CountDataOffspring),3)
+    offspring10=np.round(offspring9+naim_kvadrat(CountDataOffspring),3)
+
+    mortality6=np.round(mortality5+naim_kvadrat(CountDataMortality),3)
+    mortality7=np.round(mortality6+naim_kvadrat(CountDataMortality),3)
+    mortality8=np.round(mortality7+naim_kvadrat(CountDataMortality),3)
+    mortality9=np.round(mortality8+naim_kvadrat(CountDataMortality),3)
+    mortality10=np.round(mortality9+naim_kvadrat(CountDataMortality),3)
+
+
+
+
+
+    prognozs.append(Prognoz([ #скобка открывающая кортеж
+        #summ # возврат значения, указанного в функции, summ и есть это значение
+        subsidies6, subsidies7, subsidies8,subsidies9, subsidies10,   
+        yeild6, yeild7, yeild8,yeild9, yeild10,
+        lifetime6, lifetime7, lifetime8, lifetime9, lifetime10,
+        offspring6, offspring7, offspring8, offspring9, offspring10,
+        mortality6, mortality7, mortality8, mortality9, mortality10,
         
 
         ]), ) #скобка закрывающая кортеж и его результат
-
     return redirect(url_for('expanded'))
 
 
