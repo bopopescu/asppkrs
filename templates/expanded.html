@@ -23,7 +23,7 @@
        </style>
 </head>
 <body>
-<h1 align = 'center'>Автоматизированная система подбора пород КРС</h1>
+<h1 align = 'center'  style = "color:#085dfc">Cattle selection</h1>
 <span class="border">
     <div class="container" align='center'>
         <form method="POST" action="/deeper">
@@ -50,8 +50,8 @@
                 </div>
             </div>
 
-            <div class = 'row justify-content-start'>
-                <div class = 'col-6' align = 'center'>
+            <div class = 'row'>
+                <div class = 'col-12' align = 'center'>
                     <h5  align = 'center'>Financial Data</h5>
                     <table align = 'center' bgcolor = #E0FFFF>
                         <tr>
@@ -156,14 +156,11 @@
     </div>
 </span> 
 
-    <h3 align = 'center'>Calculation History (Variation)</h3>
-    {% for message3 in messages3 %}
-    <div align = 'center'> Yeild variation&nbsp;<i> {{message3.znachenie[0]}}</i></div>
-    <div align = 'center'>corr&nbsp;<i> {{message3.znachenie[1]}}</i></div>
-    {% endfor %}
+<p></p>
+<h1 align = 'center' style = "color:#085dfc">Results</h1>
+<p></p>
 
-
-
+<h3 align = 'center'>Calculation history (Variation)</h3>
 <div class="container">
     <div class="row">
         <table align = 'center'>
@@ -348,17 +345,6 @@
         </div>
     </div>
 </span>
-<h3>{% for prognoz in prognozs %}  {{prognoz.prognoz[0]}} {% endfor %}</h3>
-<h3>{% for prognoz in prognozs %}  {{prognoz.prognoz[1]}} {% endfor %}</h3>
-<h3>{% for prognoz in prognozs %}  {{prognoz.prognoz[2]}} {% endfor %}</h3>
-<h3>{% for prognoz in prognozs %}  {{prognoz.prognoz[3]}} {% endfor %}</h3>
-<h3>{% for prognoz in prognozs %}  {{prognoz.prognoz[4]}} {% endfor %}</h3>
-<p></p>
-<h3>{% for prognoz in prognozs %}  {{prognoz.prognoz[5]}} {% endfor %}</h3>
-<h3>{% for prognoz in prognozs %}  {{prognoz.prognoz[6]}} {% endfor %}</h3>
-<h3>{% for prognoz in prognozs %}  {{prognoz.prognoz[7]}} {% endfor %}</h3>
-<h3>{% for prognoz in prognozs %}  {{prognoz.prognoz[8]}} {% endfor %}</h3>
-<h3>{% for prognoz in prognozs %}  {{prognoz.prognoz[9]}} {% endfor %}</h3>
 
 
 
