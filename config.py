@@ -1,8 +1,10 @@
 import os
 
-basedir = os.path.abspath(os.path.dirname(__file__)) # в переменной __file__  дежит имя файла
 
-SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, '.', 'cows.db')
-# если в (basedir, '.', 'cows.db') проставить две точки, то
-#база данных будет создана на директорию выше и вероятно и запись данный тоже
-# будет производится в базу выше
+basedir = os.path.abspath(os.path.dirname(__file__)) # в переменной __file__  лежит имя файла
+
+
+class Config():
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_DATABASE_URI = (os.environ.get('DATABASE_URL') or
+        'sqlite:///' + os.path.join(basedir, 'cows.db'))
