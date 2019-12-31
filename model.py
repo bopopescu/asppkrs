@@ -2,24 +2,9 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
-class CowsBreeds (db.Model):
-    id = db.Column(db.Integer, primary_key=True) #создаем столбец, назначаем содержимое
-    breed = db.Column(db.String, nullable=False) #создаем столбец, назначаем содержимое, обязательное к заполнению
-    latitude = db.Column(db.String, nullable = False)
-    longitude = db.Column(db.String, nullable = False)
-    self_cost = db.Column(db.Float, nullable = False)
-    trade_cost = db.Column(db.Float, nullable = False)
-    subsidies = db.Column(db.Float, nullable = False)
-    pr_with_sub = db.Column(db.Float, nullable = False)
-    pr_without_sub = db.Column(db.Float, nullable = False)
-    lifetime = db.Column(db.Float, nullable = False)
-    offspring = db.Column(db.Float, nullable = False)
-    mortality = db.Column(db.Float, nullable = False)
-    yeild = db.Column(db.Float, nullable = False)
-    fat_content = db.Column(db.Float, nullable = True)#создаем столбец, назначаем содержимое, НЕ обязательное к заполнению
-    protein_content = db.Column(db.Float, nullable = True)
+class Breeds (db.Model):
 
-
+    id = db.Column(db.Integer, primary_key=True)
     breed  = db.Column(db.String, nullable = False)
     latitude  = db.Column(db.Float, nullable = False)
     longtitude  = db.Column(db.Float, nullable = False)
